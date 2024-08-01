@@ -89,25 +89,25 @@ while True:
         ball.sety(-290) #set y coordinate +290
         ball.dy *= -1 #reverse direction, making +2.5--->-2.5
 
-    if ball.xcor() > 390: #if ball is at right border
+    if ball.xcor() > 350: #if ball is at right border
         ball.goto(0,0) #return ball to center
         ball.dx *= -1 #reverse the x direction
         score1 += 1
         score.clear()
-        score.write("Player 1: {} Player 2: {}".format(score1,score2), align="center", font=("Courier",24,"normal"))
+        score.write("Player 1: {} Player 2: {}".format(score1,score2), align="center", font=("Courier",15,"normal"))
 
-    if ball.xcor() <- 390: #if ball is at left border
+    if ball.xcor() <- 350: #if ball is at left border
         ball.goto(0,0) #return ball to center
         ball.dx *= -1 #reverse the x direction 
         score2 += 1
         score.clear()
-        score.write("Playrr 1: {} Player 2: {}".format(score1,score2), align="center", font=("Courier",24,"normal"))
+        score.write("Playrr 1: {} Player 2: {}".format(score1,score2), align="center", font=("Courier",15,"normal"))
     #tasadom paddle and ball
-    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.xcor() < leftpaddle.ycor() + 40 and ball.ycor() > leftpaddle.ycor() - 40):
-        ball.setx(340)
+    if (ball.xcor() > 350 and ball.xcor() < 350) and (ball.ycor() < leftpaddle.ycor() + 50 and ball.ycor() > leftpaddle.ycor() - 50):
+        ball.setx(350)
         ball.dx *= -1
 
-    if (ball.xcor() > -340 and ball.xcor() < -350) and (ball.xcor() < rightpaddle.ycor() + 40 and ball.ycor() > rightpaddle.ycor() - 40):
-        ball.setx(-340)
-        ball.dx *= -1
+    if (ball.ycor() > -350 and ball.ycor() < -350) and (ball.ycor() < rightpaddle.ycor() + 50 and ball.ycor() > rightpaddle.ycor() - 50):
+        ball.setx(-350)
+        ball.dy *= -1
         
