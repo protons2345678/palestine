@@ -37,10 +37,9 @@ score2 = 0
 score=t.Turtle()
 score.speed(0)
 score.penup()
-score.hideturtle()
+# score.hideturtle()
 score.goto(x=0,y=260)
 score.write( "player1=0,player2=0",align="center" ,)
-score.hideturtle()
 
 #functions
 def paddle1_up():
